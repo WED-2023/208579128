@@ -1,7 +1,154 @@
-#menu
-{
-	position: fixed;
-	width: 100%;
-	height: 35px;
-	background: white;
+
+#menu {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    background-color: #297c2c;
+    align-items: center; /* Vertically align all flex items to the center */
+    position: fixed; /* Make the menu fixed */
+
+}
+
+#menu li a {
+    text-decoration: none;
+    color: #c4f5a7;
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+#menu li:first-child::before {
+    content: "";
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-image: url("david1.jpg");
+    background-size: cover;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    vertical-align: middle; /* Align the image vertically middle */
+
+}
+#menu li::after {
+    content: "|"; /* Add a pipe character after each list item */
+    margin: 0 1px; /* Adjust spacing as needed */
+    color: #ffffff;
+}
+
+#menu li:last-child::after {
+    content: ""; /* Remove the pipe from the last item */
+}
+
+#menu li {
+    margin: 0 10px;
+}
+
+.section { /* Target all sections with the class "section" */
+    background-color: rgb(190, 206, 185);
+	padding: 0px;
+	color: #276e41;
+	text-align: center;
+}
+.section h2{
+    margin-bottom: -30px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.section h1 {
+    color: #333;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+
+}
+
+/* Bold and Modern */
+.section h1 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #007bff;
+}
+
+/* Playful and Colorful */
+.section h1 {
+    font-family: Helvetica, Arial, sans-serif;
+    background-image: linear-gradient(to right, #002507, #00fc29);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section ol {
+    list-style-position: inside; /* Align list numbers inside the list */
+    padding-left: 20px; /* Add padding to the left for better spacing */
+}
+
+.section ul {
+    list-style-type: disc; /* Use disc for bullet points */
+    list-style-position: inside; /* Align bullet points inside the list */
+    padding-left: 20px; /* Add padding to the left for better spacing */
+}
+#about { /* Replace 'about' with the ID of your first section */
+    padding-top: 150px; /* Adjust this value to match the height of your menu */
+}
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+.slides {
+  display: flex;
+}
+
+.slides img {
+  display: none;
+  width: 100%;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
